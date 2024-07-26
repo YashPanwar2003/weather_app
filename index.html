@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+       <div class="search-box">
+        <i class="bi bi-geo-alt-fill"></i>
+        <input type="text" placeholder="Enter Name of your City">
+        <i class="bi bi-search"></i>
+       </div>
+       <div class="error ">
+          <img src="./assets/htsh.avif" alt="">
+          <p><strong>Oops!,Not found.</strong></p>
+       </div>
+       <div class="weather-box content">
+        <div class="image"></div>
+        <p id="info"></p>
+        <p id="temp"> </p>
+
+       </div>
+       <div class="weather-details content">
+        <div class="humidity">
+            <i class="bi bi-water"></i>
+            <p></p>
+        </div>
+        <div class="wind">
+            <i class="bi bi-wind"></i>
+            <p></p>
+        </div>
+       </div>
+
+    </div>
+    
+</body>
+<footer>
+    <script src="./script.js"></script>
+</footer>
+</html>
