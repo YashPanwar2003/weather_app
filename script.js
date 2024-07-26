@@ -16,9 +16,9 @@ function handler(){
    if(city===""){
        return;
    }
-   
+   console.log("hi yash")
 
-
+    console.log("hi rajat")
    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`).then(response=>response.json()).then(response=>{
 
      
