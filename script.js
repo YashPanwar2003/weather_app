@@ -16,10 +16,7 @@ function handler(){
    if(city===""){
        return;
    }
-  
    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`).then(response=>response.json()).then(response=>{
-
-     
       if(response.cod!==200){
         weatherbox.classList.remove("fade");
         weatherdetails.classList.remove("fade");
@@ -30,12 +27,11 @@ function handler(){
         error.classList.remove("fade")
         error.style.display="flex";
         error.classList.add("fade");
+       
         return;
 
       }
-
       const data=response;
-      console.log(response)
       description.innerHTML=data.weather[0].description;
       tempeature.innerHTML=`${parseInt(data.main.temp)} &#176C`;
       humidity.innerHTML=`${data.main.humidity} %`;
@@ -48,15 +44,8 @@ function handler(){
       weatherdetails.style.display="flex";
       weatherbox.classList.add("fade");
       weatherdetails.classList.add("fade");
-
-
-
-
-
-
    })
 }
-
 
 search_button.addEventListener("click",handler);
 
